@@ -1,0 +1,81 @@
+html {
+  font-size: 14px;
+}
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* New nav CSS Start */
+.navbar-brand img {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+@media (min-width: 576px) {
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .navbar-collapse {
+        flex-basis: 0;
+        flex-grow: 0;
+    }
+    .navbar-nav {
+        gap: 30px;
+    }
+}
+
+.btn {
+    border-radius: 50px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.nav-item button.nav-link {
+    background-color: #00755E;
+    color: #FFFFFF !important;
+    border: 1px solid #00755E;
+}
+.nav-item button.nav-link:hover {
+    background-color: transparent;
+    color: #00755E !important;
+    border: 1px solid #00755E;
+}
+/* New nav CSS End */
+
+
+/* Hero section CSS Start */
+.hero {
+    min-height: 655px;
+    background-image: url(../images/header-hero.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Hero section CSS End */
