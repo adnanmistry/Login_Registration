@@ -1,40 +1,81 @@
-html {
-  font-size: 14px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 16px;
 }
-body {
-    font-family: "Nunito", sans-serif;
+:root {
+    --primary-color: #ffc107;
+    --secondary-color: #435d30;
+    --bg-color: #f6f8f5;
+    --dark-color: #212529;
+    --font-size-16: 16px;
+    --padding-top-60: 60px;
+    --padding-bottom-60: 60px;
+    --btn-border-radius: 50px;
+}
+a {
+    text-decoration: none;
+}
+.bg-light-color {
+    background-color: var(--bg-color);
+}
+p {
+    letter-spacing: 0.4px;
+    font-size: 1rem; /* 16px */
+    font-weight: 300;
+}
+@media (max-width: 480px) {
+    p {
+        font-size: 0.9rem; /* Around 14px */
+    }
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 0.95rem; /* Around 15px */
+    }
+}
+h1 {
+    font-size: 70px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.75rem; /*  28px */
+    }
 }
+h2 {
+    font-size: 2rem; /* 32px */
+}
+
+h5 {
+font-weight: 400;
+}
+.padding-y-60 {
+    padding-top: var(--padding-top-60);
+    padding-bottom: var(--padding-bottom-60);
+}
+
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+  box-shadow:none;
 }
 
 /* New nav CSS Start */
 .navbar-brand img {
-    height: 30px;
-    width: 30px;
+    width: 80px;
 }
 
-.navbar {
-    background-color: transparent !important;
-    position: absolute;
-    top: 0;
-    width: 100%;
+.navbar-light .navbar-nav .btn {
+    color: var(--dark-color) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
 }
 @media (min-width: 576px) {
     .navbar {
@@ -49,33 +90,107 @@ body {
         gap: 30px;
     }
 }
-
 .btn {
-    border-radius: 50px;
+    border-radius: var(--btn-border-radius);
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
 .nav-item button.nav-link {
-    background-color: #00755E;
-    color: #FFFFFF !important;
-    border: 1px solid #00755E;
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+    border: 1px solid var(--primary-color);
 }
 .nav-item button.nav-link:hover {
     background-color: transparent;
-    color: #00755E !important;
-    border: 1px solid #00755E;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler {
+    border: 0;
 }
 /* New nav CSS End */
-
-
 /* Hero section CSS Start */
 .hero {
     min-height: 655px;
-    background-image: url(../images/header-hero.jpg);
-    background-repeat: no-repeat;
+    background: url(../images/header-hero.jpg) no-repeat center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+.hero .btn {
+    padding: 10px 40px !important;
+}
+.hero .btn  {
+    color: var(--dark-color);
+}
+.hero .btn .btn-warning:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.hero-content {
+    gap: 20px;
+}
 /* Hero section CSS End */
+
+
+/* Our Services Start */
+.our-services h2 {
+    color: var(--secondary-color);
+}
+.our-services .card {
+    gap: 20px;
+}
+.title-underline::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 110px;
+    background-color: var(--primary-color);
+}
+/* Our Services End */
+
+/* Testimonial Start  */
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.testimonial-content .quote {
+    height: 40px;
+    width: 40px;
+}
+.testimonial-content p{
+    font-size: 26px;
+    width: 60%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .testimonial-content p {
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    .testimonial-content p {
+        width: 70%;
+    }
+}
+.testimonial-content .client-img {
+    gap: 10px;
+}
+.testimonial-content .client-img img {
+    height: 50px;
+    width: 50px;
+}
+.testimonial-content .client-img span {
+    font-size: 14px;
+    font-weight: 300;
+}
+/* Testimonial End  */
