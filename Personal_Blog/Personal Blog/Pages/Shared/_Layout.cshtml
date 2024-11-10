@@ -32,7 +32,7 @@
                             <a class="nav-link" asp-area="" asp-page="/Service">Services</a>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link btn" asp-area="" asp-page="/Contact">Let's Talk</button>
+                            <a class="nav-link lets-talk" asp-area="" asp-page="/Contact">Let's Talk</a>
                         </li>
                     </ul>
                 </div>
@@ -40,14 +40,18 @@
         </nav>
     </header>
     <div class="container-fluid p-0">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer py-4">
         <div class="container">
-            &copy; 2024 - Personal_Blog - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-lg-4 m-auto"><p class="mb-4 mb-md-0 text-center text-md-start">Copyright © 2024 All Rights Reserved</p></div>
+                <div class="col-lg-4 m-auto text-center"><img src="./images/logo.svg" alt="Blog" /></div>
+                <div class="col-lg-4 m-auto"><p class="mt-4 mb-0 mt-md-0 text-center text-md-end">Love Nature by Tyler Moore</p></div>
+            </div>
         </div>
     </footer>
 

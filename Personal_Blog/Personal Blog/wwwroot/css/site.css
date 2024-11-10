@@ -10,6 +10,7 @@
     --secondary-color: #435d30;
     --bg-color: #f6f8f5;
     --dark-color: #212529;
+    --white-color: #FFFFFF;
     --font-size-16: 16px;
     --padding-top-60: 60px;
     --padding-bottom-60: 60px;
@@ -23,30 +24,14 @@ a {
 }
 p {
     letter-spacing: 0.4px;
-    font-size: 1rem; /* 16px */
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
     font-weight: 300;
-}
-@media (max-width: 480px) {
-    p {
-        font-size: 0.9rem; /* Around 14px */
-    }
-}
-@media (max-width: 768px) {
-    p {
-        font-size: 0.95rem; /* Around 15px */
-    }
 }
 h1 {
     font-size: 70px;
 }
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.75rem; /*  28px */
-    }
-}
 h2 {
-    font-size: 2rem; /* 32px */
+    font-size: clamp(1.75rem, 1.6893rem + 0.2589vw, 2rem);
 }
 
 h5 {
@@ -75,7 +60,7 @@ font-weight: 400;
     font-weight: 400;
 }
 .navbar-light .navbar-nav .nav-link:hover {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
 }
 @media (min-width: 576px) {
     .navbar {
@@ -91,17 +76,17 @@ font-weight: 400;
     }
 }
 .btn {
-    border-radius: var(--btn-border-radius);
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding: 10px 30px;
 }
-.nav-item button.nav-link {
+.nav-item .lets-talk {
     background-color: var(--primary-color);
-    color: var(--white-color) !important;
+    color: var(--secondary-color) !important;
     border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 10px 30px !important;
 }
-.nav-item button.nav-link:hover {
-    background-color: transparent;
+.nav-item .lets-talk:hover {
+    background-color: transparent !important;
     color: var(--primary-color) !important;
     border: 1px solid var(--primary-color);
 }
@@ -194,3 +179,36 @@ font-weight: 400;
     font-weight: 300;
 }
 /* Testimonial End  */
+
+
+/* About Us Start */
+.about-us span {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+.about-us h3 {
+    font-size: clamp(2rem, 1.8786rem + 0.5178vw, 2.5rem);
+    color: var(--secondary-color);
+}
+/* About Us End */
+
+
+/* Questions Start */
+.questions {
+    background: url(../images/footer-hero-big.jpg) no-repeat center;
+}
+.questions h4 {
+    color: var(--secondary-color);
+}
+@media (min-width: 768px) {
+    .questions p {
+        width: 60%;
+    }
+}
+/* Questions end*/
+
+/* Footer Start */
+.footer img {
+    width: 90px;
+}
+/* Footer End */
