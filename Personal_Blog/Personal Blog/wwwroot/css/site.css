@@ -208,6 +208,9 @@ font-weight: 400;
 /* Questions end*/
 
 /* Footer Start */
+.footer p {
+    font-size: clamp(0.75rem, 0.7197rem + 0.1294vw, 0.875rem);
+}
 .footer img {
     width: 90px;
 }
