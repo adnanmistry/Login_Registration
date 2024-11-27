@@ -1,0 +1,28 @@
+﻿@page
+@model Personal_Blog.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+@* Form start *@
+
+<div class="container contact-us">
+    <h2>Contact Us</h2>
+    <form method="post" class="contact-form mt-4 row">
+        <div class="form-group col-6">
+            @* <label for="Name">Name</label> *@
+            <input type="text" placeholder="Name" class="form-control" id="Name" name="Name" required>
+        </div>
+        <div class="form-group col-6">
+            @* <label for="Email">Email</label> *@
+            <input type="email" placeholder="Email" class="form-control" id="Email" name="Email" required>
+        </div>
+        <div class="form-group col-12">
+            @* <label for="Message">Message</label> *@
+            <textarea class="form-control" placeholder="Message" id="Message" name="Message" rows="5" required></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

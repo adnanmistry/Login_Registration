@@ -215,3 +215,13 @@ font-weight: 400;
     width: 90px;
 }
 /* Footer End */
+
+
+/* Contact Us start */
+.contact-form {
+    row-gap: 24px;
+}
+.contact-form .btn {
+    width: fit-content;
+}
+/* Contact Us end */

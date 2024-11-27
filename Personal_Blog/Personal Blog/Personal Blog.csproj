@@ -7,4 +7,12 @@
     <RootNamespace>Personal_Blog</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Pages\contactus.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\contactus.cshtml" />
+  </ItemGroup>
+
 </Project>
